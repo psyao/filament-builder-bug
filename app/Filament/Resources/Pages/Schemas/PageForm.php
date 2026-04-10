@@ -407,14 +407,32 @@ class PageForm
                                     ])
                                     ->default('internal')
                                     ->native(false)
+                                    ->live()
                                     ->required(),
 
                                 Group::make()
                                     ->schema([
                                         TextInput::make('url')
+                                            ->label('Internal URL')
                                             ->required(),
                                     ])
                                     ->visible(fn (Get $get) => $get('link') === 'internal'),
+
+                                Grid::make()
+                                    ->schema([
+                                        TextInput::make('url')
+                                            ->label('External URL')
+                                            ->required(),
+
+                                        Toggle::make('nofollow')
+                                            ->default(false)
+                                            ->inline(false),
+
+                                        Toggle::make('sponsored')
+                                            ->default(false)
+                                            ->inline(false),
+                                    ])
+                                    ->visible(fn (Get $get) => $get('link') === 'external'),
                             ]),
                     ]),
             ]);
