@@ -1,6 +1,16 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(php artisan:*)",
+      "Bash(composer require:*)",
+      "Bash(composer show:*)",
+      "mcp__laravel-boost__search-docs",
+      "Bash(vendor/bin/pint:*)",
+      "mcp__laravel-boost__get-absolute-url"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
     "laravel-boost"
-  ],
-  "enableAllProjectMcpServers": true
+  ]
 }
