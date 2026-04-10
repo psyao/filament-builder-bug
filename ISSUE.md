@@ -1,4 +1,4 @@
-# Bug Report
+# Repeater inside Builder crashes on save when block contains layout components with `->visible()`: `Call to a member function getStateSnapshot() on null`
 
 ## Package
 
